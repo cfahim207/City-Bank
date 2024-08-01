@@ -1,7 +1,6 @@
 asgiref
 comtypes
 crispy-bootstrap5
-dj-database-url
 Django
 django-crispy-forms
 django-environ
@@ -10,16 +9,15 @@ numpy
 opencv-python
 pillow
 psycopg2
-psycopg2-binary
 PyAutoGUI
 PyGetWindow
 PyMsgBox
 pyperclip
-pypiwin32
 PyRect
 PyScreeze
 pyttsx3
 pytweening
+pywin32==<version>; platform_system=="Windows"
 sqlparse
-typing_extensions
 tzdata
+dj_database_url
