@@ -34,7 +34,6 @@ class DepositMoneyView(LoginRequiredMixin, CreateView):
         amount = form.cleaned_data.get('amount')
         
         account = self.request.user.account
-        print(account)
         account.balance += amount # amount = 200, tar ager balance = 0 taka new balance = 0+200 = 200
         account.save(
             update_fields=[
