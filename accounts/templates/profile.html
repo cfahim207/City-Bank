@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block content %}
+<div class='mt-5 text-center text-white'>
+  <h4 class="">Account NO: {{request.user.account.account_no}}</h4>
+  <h1>Hello!! {{user.first_name}} {{user.last_name}}</h1>
+    <h1 class="mt-3"> Welcome to your Profile Page </h1>
+
+
+<a class="btn btn-success mt-3 " href="">Update Information</a>
+
+
+<h1 class=' mt-5 text-center border border-white rounded-5 bg-dark text-white p-3'>Borrow Book List</h1>
+<div class="d-flex flex-wrap justify-content-center px-5 pt-5">
+
+  
+  {% for book in data %}
+
+  <div class="w-50" >
+    <div class="card m-2 p-2"  >
+      <div class="card-body text-center">
+        <img src="{{book.image.url}}" class="card-img-top w-50" alt="...">
+        <h4 class="card-title mb-3">{{book.title}}</h4>
+        <p class="card-text"> {{book.discription}} </p>
+        <p>Price:  {{ book.borrowing_price }}</p>
+        <p>Brand:  {{ book.category.name }}</p>
+       
+      </div>
+    </div>
+  </div>
+   {% endfor %}
+
+</div>
+{% endblock content %}

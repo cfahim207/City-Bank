@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block content %}
+
+<h1 class=" mb-3 mt-4 text-center text-success"> Change Your Information</h1>
+
+
+{% load crispy_forms_tags %}
+<div class="pt-3">
+    <form class=" shadow p-5 mb-5 bg-body-tertiary rounded"  method="post"  style="width: 50%; margin: auto" novalidate>
+
+
+  {% csrf_token %}
+  <!-- {{form | crispy}} -->
+  {% for fm in form %}
+   {{fm.label_tag}} {{fm}} {{fm.errors | striptags}} 
+  {% endfor %}
+  <br />
+  <button class="btn btn-warning" type="submit">Update</button>
+  <br>
+  <a class="btn btn-danger mt-3 text-center" href="">Change Your Password</a>
+  
+</form>
+</div>
+
+{% endblock content %}
