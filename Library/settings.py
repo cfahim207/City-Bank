@@ -63,6 +63,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://city-library-l5q1.onrender.com',
+]
+
 ROOT_URLCONF = 'Library.urls'
 
 TEMPLATES = [
